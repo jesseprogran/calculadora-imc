@@ -10,15 +10,16 @@
   /*  cores */
   --tt-titulo: #0c3440;
 
-  --tt-label: #52686e;
+  --tt-label: #000000;
   --tt-input: #0e1314;
   --ot-input: #4c5c5f;
   --bd-input: #7f8586;
   --tt-placeholder: rgba(73, 80, 87, 0.5);
+  --bg-input: #DCE2E9;
 
   --tt-button: white;
   --bg-button: #83310a;
-  
+
   --bg-error: black;
   --tt-error: white;
 }
@@ -43,4 +44,42 @@ body {
   margin-inline: auto;
   box-shadow: 0 .3rem .2rem rgba(0,0,0,2);
   border-radius: .6rem;
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: var(--tt-titulo);
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+}
+
+form label {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--tt-label);
+  margin-bottom: .8rem;
+  display: block;
+}
+
+form input {
+  width: 100%;
+  border: 1px solid var(--bd-input);
+  background: var(--bg-input);
+  padding: 1.6rem;
+  border-radius: .4rem;
+}
+
+form input:focus {
+  outline: 2px solid var(--ot-input);
+}
+
+form input::placeholder {
+  color: var(--tt-placeholder);
+}
+
+.input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
 }
